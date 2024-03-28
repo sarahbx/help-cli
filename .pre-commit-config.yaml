@@ -1,0 +1,41 @@
+default_language_version:
+    python: python3
+
+fail_fast: false
+
+repos:
+  - repo: https://github.com/hadialqattan/pycln
+    rev: "v1.0.3"
+    hooks:
+      - id: pycln
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: "v5.7.0"
+    hooks:
+      - id: isort
+
+  - repo: https://github.com/psf/black
+    rev: "22.3.0"
+    hooks:
+    - id: black
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v3.4.0"
+    hooks:
+    - id: check-merge-conflict
+    - id: debug-statements
+#    - id: trailing-whitespace
+#      args: [--markdown-linebreak-ext=md] # Do not process Markdown files.
+#    - id: end-of-file-fixer
+    - id: check-ast
+    - id: check-builtin-literals
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: "3.8.4"
+    hooks:
+      - id: flake8
+        additional_dependencies: [
+          "git+https://github.com/RedHatQE/flake8-plugins.git",
+          "pep8-naming"
+        ]
+

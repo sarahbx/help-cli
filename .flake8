@@ -1,0 +1,48 @@
+[flake8]
+max-line-length = 120
+exclude =
+    doc,
+    .tox,
+    .git,
+    .yml,
+    Pipfile.*,
+    docs/*,
+    .cache/*
+
+fcfn_exclude_functions =
+    update,
+    getLogger,
+    loads,
+    get,
+    appens,
+    next,
+    setdefault,
+    dumps,
+    request,
+    list,
+    warning,
+    join,
+    rmtree,
+    open,
+    os,
+    write,
+    append,
+    sorted,
+    compile,
+    int,
+    extend,
+    sleep,
+    check_output,
+    sub_resource_level,
+    func,
+    LOGGER,
+    findall,
+    add_argument,
+    utcfromtimestamp,
+    signal,
+    bash,
+    Tokens,
+    tokenize,
+
+enable-extensions =
+    FCFN,

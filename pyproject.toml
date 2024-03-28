@@ -1,0 +1,45 @@
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry]
+name = "help-cli"
+version = "0.0.0"
+description = "CLI to automate various day-to-day tasks"
+authors = ["Sarah Bennert <sarah@xhub.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+packages = [{ include = "help_cli" }]
+homepage = "https://gitlab.com/sarahbx/hey-cli"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/sarahbx/help-cli/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-simple-logger = "*"
+openshift-python-wrapper = "*"
+
+[tool.poetry.dev-dependencies]
+ipdb = "*"
+pytest = "*"
+
+[tool.black]
+line-length = 120
+include = '(help_cli/.*|config|main)\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''

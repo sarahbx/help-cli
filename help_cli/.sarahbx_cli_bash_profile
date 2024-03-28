@@ -1,0 +1,26 @@
+function ps1_get_git {
+  git rev-parse --is-inside-work-tree 2>/dev/null 1>&2 && \
+  echo -n "($(git rev-parse --abbrev-ref HEAD))"
+}
+
+function ps1_get_user {
+  if [[ "${USER}" == "sbennert" ]]; then
+    echo -n "sarahbx"
+  else
+    echo -n "${USER}"
+  fi
+}
+
+function ps1_get_cli {
+  if [[ $(whoami) == "root" ]]; then
+    echo -n "#"
+  else
+    echo -n "$"
+  fi
+}
+
+if [[ -d "${HOME}/sbennert" ]]; then
+  cd "${HOME}/sbennert"
+fi
+
+export PS1='exit $?: $(date -u)\n\n[$(hostname)]\n$(ps1_get_user) \w\n$(ps1_get_git)$(ps1_get_cli) '
