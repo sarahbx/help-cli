@@ -1,4 +1,8 @@
 # help-cli
+
+### Note: deprecating, recreating in Rust
+
+---
 [wip] transferring from local  
 trying something new, subject to change without notice  
 
