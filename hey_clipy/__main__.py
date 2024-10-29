@@ -6,11 +6,11 @@ from pathlib import Path
 import kubernetes
 from ocp_resources.resource import get_client
 
-from help_cli.network import BastionProxy
-from help_cli.openshift import OpenShiftCluster
-from help_cli.sync import sync, sync_help_cli_file
-from help_cli.ssh import SSH, SCP, SSHCopyID
-from help_cli.utils import _exit, bash, get_cluster_directory
+from hey_clipy.network import BastionProxy
+from hey_clipy.openshift import OpenShiftCluster
+from hey_clipy.sync import sync, sync_help_cli_file
+from hey_clipy.ssh import SSH, SCP, SSHCopyID
+from hey_clipy.utils import _exit, bash, get_cluster_directory
 
 
 LOGGER = logging.getLogger(__name__)

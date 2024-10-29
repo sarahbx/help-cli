@@ -1,4 +1,4 @@
-from help_cli.ssh import SSH
+from hey_clipy.ssh import SSH
 
 
 class BastionProxy(SSH):

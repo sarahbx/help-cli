@@ -1,10 +1,8 @@
-# help-cli
-
-### Note: deprecating, recreating in Rust
+# hey-clipy
+Subject to change without notice  
+Rust version at [https://github.com/sarahbx/rusted](https://github.com/sarahbx/rusted)
 
 ---
-[wip] transferring from local  
-trying something new, subject to change without notice  
 
 Python/Bash based CLI to automate various day-to-day tasks
 

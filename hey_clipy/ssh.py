@@ -1,8 +1,8 @@
 import os
 import shlex
 
-from help_cli.exceptions import HelpCLIUnsupportedRemoteHost
-from help_cli.utils import get_executor_hostname
+from hey_clipy.exceptions import HelpCLIUnsupportedRemoteHost
+from hey_clipy.utils import get_executor_hostname
 
 
 class SSH:
